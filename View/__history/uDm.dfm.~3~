@@ -1,0 +1,80 @@
+object DM: TDM
+  OldCreateOrder = False
+  OnCreate = DataModuleCreate
+  Height = 440
+  Width = 703
+  object FDConnection1: TFDConnection
+    Params.Strings = (
+      'Database=pedidos'
+      'User_Name=root'
+      'Password=123456'
+      'DriverID=MySQL')
+    LoginPrompt = False
+    Left = 136
+    Top = 80
+  end
+  object FDPhysMySQLDriverLink1: TFDPhysMySQLDriverLink
+    VendorLib = 'D:\teste\dis\Projetc\exe\libmysql.dll'
+    Left = 128
+    Top = 152
+  end
+  object FDGUIxWaitCursor1: TFDGUIxWaitCursor
+    Provider = 'Forms'
+    Left = 256
+    Top = 144
+  end
+  object FDMemTable1: TFDMemTable
+    Filter = 'processa='#39'S'#39
+    FieldDefs = <>
+    IndexDefs = <>
+    AggregatesActive = True
+    FetchOptions.AssignedValues = [evMode]
+    FetchOptions.Mode = fmAll
+    ResourceOptions.AssignedValues = [rvSilentMode]
+    ResourceOptions.SilentMode = True
+    UpdateOptions.AssignedValues = [uvCheckRequired, uvAutoCommitUpdates]
+    UpdateOptions.CheckRequired = False
+    UpdateOptions.AutoCommitUpdates = True
+    StoreDefs = True
+    Left = 192
+    Top = 272
+    object FDMemTable1id: TIntegerField
+      FieldName = 'id'
+    end
+    object FDMemTable1idproduto: TIntegerField
+      FieldName = 'idproduto'
+    end
+    object FDMemTable1idpedido: TIntegerField
+      FieldName = 'idpedido'
+    end
+    object FDMemTable1qtde: TIntegerField
+      FieldName = 'qtde'
+    end
+    object FDMemTable1vunitario: TCurrencyField
+      FieldName = 'vunitario'
+    end
+    object FDMemTable1vrtotalitem: TCurrencyField
+      FieldName = 'vrtotalitem'
+    end
+    object FDMemTable1nome_produto: TStringField
+      FieldName = 'nome_produto'
+      Size = 45
+    end
+    object FDMemTable1processa: TStringField
+      FieldName = 'processa'
+      Size = 1
+    end
+    object FDMemTable1somaItens: TAggregateField
+      FieldName = 'somaItens'
+      Active = True
+      currency = True
+      DisplayName = ''
+      Expression = 'sum(qtde*vunitario)'
+    end
+  end
+  object DataSource1: TDataSource
+    DataSet = FDMemTable1
+    Left = 224
+    Top = 272
+  end
+end

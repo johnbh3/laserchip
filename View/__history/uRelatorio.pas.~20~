@@ -1,0 +1,77 @@
+unit uRelatorio;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Buttons, frxClass,
+  frxDBSet, frxExportBaseDialog, frxExportPDF, classe.loja, classe.funcionario;
+
+type
+  TfrmRelatorio = class(TForm)
+    BitBtn1: TBitBtn;
+    BitBtn2: TBitBtn;
+    CBOTipoRelatorio: TComboBox;
+    Label1: TLabel;
+    Exportar_PDF: TfrxPDFExport;
+    frxReport1: TfrxReport;
+    frxLojas: TfrxDBDataset;
+    frxFuncionarios: TfrxDBDataset;
+    procedure BitBtn2Click(Sender: TObject);
+    procedure FormShow(Sender: TObject);
+    procedure BitBtn1Click(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmRelatorio: TfrmRelatorio;
+
+implementation
+
+{$R *.dfm}
+
+uses uDm;
+
+procedure TfrmRelatorio.BitBtn1Click(Sender: TObject);
+var
+  pathExe:String;
+begin
+  pathExe:=ExtractFilePath(Application.ExeName);
+
+  case CBOTipoRelatorio.ItemIndex of
+  0:Begin
+     DM.dsLoja.DataSet := DM.Loja.listaLojas(0);
+     frxReport1.LoadFromFile (pathExe+'Relatorio\lojas.fr3');
+    End;
+  1:Begin
+      DM.dsfuncionario .DataSet := DM.Funcionario.relatorioFuncionarios;
+      frxReport1.LoadFromFile (pathExe+'Relatorio\funcionarios.fr3');
+    End;
+  end;
+
+
+
+  frxReport1.ShowReport();
+end;
+
+procedure TfrmRelatorio.BitBtn2Click(Sender: TObject);
+begin
+  frmRelatorio.Close;
+end;
+
+procedure TfrmRelatorio.FormCreate(Sender: TObject);
+begin
+    DM.Loja  := TLoja.Create(DM.FDConnection1);
+    DM.Funcionario  := TFuncionario.Create(DM.FDConnection1);
+end;
+
+procedure TfrmRelatorio.FormShow(Sender: TObject);
+begin
+  CBOTipoRelatorio.ItemIndex:=0;
+end;
+
+end.

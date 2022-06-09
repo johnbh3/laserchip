@@ -1,0 +1,76 @@
+unit classe.produtos;
+
+interface
+uses
+  FireDAC.Comp.Client, Vcl.Dialogs, System.SysUtils;
+
+type
+  TProdutos = class
+    private
+    fID: integer;
+    fNome: string;
+    fvrproduto: string ;
+    fConexao      : TFDConnection;
+    fEndereco: string;
+
+
+    public
+      property conexao  : TFDConnection read Fconexao write fconexao;
+      property id       : integer read fID write fId ;
+      property nome     : string read fNome write fNome;
+      property vrproduto : string read fvrproduto write fvrproduto;
+
+
+      constructor Create (conexao: TFDConnection);
+      destructor Destroy ; override;
+
+      function listaProdutos (id: integer): TFDQuery;
+
+  end;
+
+implementation
+
+var
+  Qry :TFDQuery;
+
+{ TClientes }
+
+constructor TProdutos.Create(conexao: TFDconnection);
+begin
+   fConexao  := conexao;
+
+   Qry :=TFDQuery.Create(nil);
+   Qry.Connection  :=fConexao;
+
+end;
+destructor TProdutos.Destroy;
+begin
+  Qry.Destroy;
+  inherited;
+end;
+
+
+function TProdutos.listaProdutos(id: integer): TFDQuery;
+begin
+  try
+    Qry.Close;
+    Qry.SQL.Clear;
+    Qry.sql.Add('SELECT');
+    Qry.sql.Add(' id,');
+    Qry.sql.Add(' nome,');
+    Qry.sql.Add(' vrproduto');
+    Qry.sql.Add('from produto');
+
+
+
+    if id<>0 then
+      Qry.SQL.Add('Where id='+QuotedStr(IntToStr(id)));
+
+    Qry.Open();
+
+  finally
+     Result :=Qry;
+  end;
+end;
+
+end.

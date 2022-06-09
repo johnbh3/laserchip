@@ -1,0 +1,79 @@
+unit classe.loja;
+
+interface
+uses
+  FireDAC.Comp.Client, Vcl.Dialogs, System.SysUtils;
+
+type
+  TLoja = class
+    private
+    fConexao      : TFDConnection;
+    fID           : integer;
+    fRazaosocial  : string;
+    fCnpj         : string;
+    fTelefone     : string;
+    fCidade       : string;
+
+    public
+      property conexao      : TFDConnection read Fconexao write fconexao;
+      property id           : integer read fID write fId ;
+      property razaosocial  : string read fRazaosocial write fRazaosocial;
+      property cnpj         : string read fCnpj write fCnpj;
+      property telefone     : string read fTelefone write fTelefone;
+      property cidade       : string read fCidade write fCidade;
+
+      constructor Create (conexao: TFDConnection);
+      destructor Destroy ; override;
+
+      function listaLojas (id: integer): TFDQuery;
+
+  end;
+
+implementation
+
+var
+  Qry :TFDQuery;
+
+{ TLoja }
+
+constructor TLoja.Create(conexao: TFDconnection);
+begin
+   fConexao  := conexao;
+
+   Qry :=TFDQuery.Create(nil);
+   Qry.Connection  :=fConexao;
+
+end;
+destructor TLoja.Destroy;
+begin
+  Qry.Destroy;
+  inherited;
+end;
+
+
+function TLoja.listaLojas(id: integer): TFDQuery;
+begin
+  try
+    Qry.Close;
+    Qry.SQL.Clear;
+    Qry.sql.Add('SELECT');
+    Qry.sql.Add(' id,');
+    Qry.sql.Add(' razaosocial,');
+    Qry.sql.Add(' cnpj,');
+    Qry.sql.Add(' telefone,');
+    Qry.sql.Add(' cidade');
+    Qry.sql.Add('from loja');
+
+
+
+    if id<>0 then
+      Qry.SQL.Add('Where id='+QuotedStr(IntToStr(id)));
+
+    Qry.Open();
+
+  finally
+     Result :=Qry;
+  end;
+end;
+
+end.

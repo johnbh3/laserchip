@@ -1,0 +1,35 @@
+object DM: TDM
+  OldCreateOrder = False
+  OnCreate = DataModuleCreate
+  Height = 440
+  Width = 703
+  object FDConnection1: TFDConnection
+    Params.Strings = (
+      'Database=pedidos'
+      'User_Name=root'
+      'Password=123456'
+      'DriverID=MySQL')
+    LoginPrompt = False
+    Left = 136
+    Top = 80
+  end
+  object FDPhysMySQLDriverLink1: TFDPhysMySQLDriverLink
+    VendorLib = 'D:\teste\dis\Projetc\exe\libmysql.dll'
+    Left = 128
+    Top = 152
+  end
+  object FDGUIxWaitCursor1: TFDGUIxWaitCursor
+    Provider = 'Forms'
+    Left = 160
+    Top = 152
+  end
+  object dsLoja: TDataSource
+    Left = 256
+    Top = 136
+  end
+  object FDQuery: TFDQuery
+    Connection = FDConnection1
+    Left = 200
+    Top = 344
+  end
+end

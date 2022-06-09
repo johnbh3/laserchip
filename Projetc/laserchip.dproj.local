@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2021/09/09 20:14:49.000.385,=C:\Users\johnbh3\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/09/09 20:50:02.000.934,=C:\Users\johnbh3\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/09/09 21:09:11.000.082,=C:\Users\johnbh3\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/09/09 21:25:58.000.192,=C:\Users\johnbh3\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/09/10 20:49:21.000.907,=C:\Users\johnbh3\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/09/10 20:51:15.000.850,=C:\Users\johnbh3\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/11/05 12:10:07.000.787,=C:\Users\johnbh3\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/11/25 14:28:34.000.841,=C:\Users\johnbh3\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/12/28 11:55:55.000.770,=C:\Users\johnbh3\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/01/11 12:35:40.000.837,=C:\Users\johnbh3\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/01/11 12:43:09.000.714,=C:\Users\johnbh3\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/06/05 16:41:15.000.120,=C:\Users\johnbh3\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/06/05 17:44:04.000.837,C:\Users\johnbh3\Documents\Embarcadero\Studio\Projects\Unit1.dfm=D:\teste\dis\View\uPrincipal.dfm</Transaction>
+    <Transaction>2022/06/05 17:44:04.000.837,C:\Users\johnbh3\Documents\Embarcadero\Studio\Projects\Unit1.pas=D:\teste\dis\View\uPrincipal.pas</Transaction>
+    <Transaction>2022/06/05 17:44:27.000.591,C:\Users\johnbh3\Documents\Embarcadero\Studio\Projects\Project1.dproj=D:\teste\dis\Projetc\laserchip.dproj</Transaction>
+    <Transaction>2022/06/05 19:53:44.000.125,=D:\teste\dis\Projetc\Unit1.pas</Transaction>
+    <Transaction>2022/06/05 20:04:12.000.366,=D:\teste\dis\Projetc\Unit2.pas</Transaction>
+    <Transaction>2022/06/05 20:06:05.000.329,D:\teste\dis\Projetc\Unit1.dfm=D:\teste\dis\View\uPesquisaLojas.dfm</Transaction>
+    <Transaction>2022/06/05 20:06:05.000.329,D:\teste\dis\Projetc\Unit1.pas=D:\teste\dis\View\uPesquisaLojas.pas</Transaction>
+    <Transaction>2022/06/05 20:20:59.000.190,=D:\teste\dis\Projetc\Unit1.pas</Transaction>
+    <Transaction>2022/06/05 20:21:41.000.479,D:\teste\dis\Projetc\Unit1.dfm=D:\teste\dis\View\uCadLoja.dfm</Transaction>
+    <Transaction>2022/06/05 20:21:41.000.479,D:\teste\dis\Projetc\Unit1.pas=D:\teste\dis\View\uCadLoja.pas</Transaction>
+    <Transaction>2022/06/05 20:39:39.000.860,=D:\teste\dis\View\uCadFuncionario.pas</Transaction>
+    <Transaction>2022/06/05 20:39:40.000.195,=D:\teste\dis\View\uPesquisaFuncionario.pas</Transaction>
+    <Transaction>2022/06/05 20:45:52.000.528,=D:\teste\dis\View\uDm.pas</Transaction>
+    <Transaction>2022/06/05 20:46:27.000.403,=D:\teste\dis\Controller\classe.conexao.pas</Transaction>
+    <Transaction>2022/06/06 13:25:45.000.154,=D:\teste\dis\Model\classe.produtos.pas</Transaction>
+    <Transaction>2022/06/06 13:25:45.000.120,=D:\teste\dis\Model\classe.clientes.pas</Transaction>
+    <Transaction>2022/06/06 13:31:20.000.999,D:\teste\dis\Model\classe.clientes.pas=</Transaction>
+    <Transaction>2022/06/06 13:31:21.000.012,D:\teste\dis\Model\classe.produtos.pas=</Transaction>
+    <Transaction>2022/06/06 13:31:43.000.485,=D:\teste\dis\Model\classe.funcionario.pas</Transaction>
+    <Transaction>2022/06/06 13:31:43.000.508,=D:\teste\dis\Model\classe.loja.pas</Transaction>
+    <Transaction>2022/06/06 15:31:24.000.359,=D:\teste\dis\Projetc\Unit1.pas</Transaction>
+    <Transaction>2022/06/06 15:33:07.000.302,=D:\teste\dis\View\uFrmSenha.pas</Transaction>
+    <Transaction>2022/06/06 15:36:32.000.098,=D:\teste\dis\Projetc\Unit1.pas</Transaction>
+    <Transaction>2022/06/06 15:37:08.000.225,D:\teste\dis\View\uRelatorio.dfm=D:\teste\dis\Projetc\Unit1.dfm</Transaction>
+    <Transaction>2022/06/06 15:37:08.000.225,D:\teste\dis\View\uRelatorio.pas=D:\teste\dis\Projetc\Unit1.pas</Transaction>
+    <Transaction>2022/06/06 16:46:15.000.350,=D:\teste\dis\Projetc\Unit1.pas</Transaction>
+    <Transaction>2022/06/06 16:47:10.000.837,D:\teste\dis\View\uFiltro.pas=D:\teste\dis\Projetc\Unit1.pas</Transaction>
+    <Transaction>2022/06/06 16:47:10.000.837,D:\teste\dis\View\uFiltro.dfm=D:\teste\dis\Projetc\Unit1.dfm</Transaction>
+  </Transactions>
+</BorlandProject>
